@@ -1,0 +1,73 @@
+body {
+    
+}
+
+.body-bg {
+    background-color: #00c6ff;
+    background-image: linear-gradient(#00c6ff, #0072ff);
+    height: 100vh;
+}
+
+#app {
+    background: #f1f1f1;
+    height: 756px;
+}
+
+.main_wrapper {
+    padding-top: 12em;
+}
+
+.main_menu .fas {
+    width: 26px;
+}
+
+.login-container {
+    width: 23%;
+    margin: auto;
+}
+
+.register-container {
+    width: 35%;
+    margin: auto;
+}
+
+.input-container {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.icon {
+  padding: 10px;
+  background: dodgerblue;
+  color: white;
+  min-width: 50px;
+  text-align: center;
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px;
+  outline: none;
+}
+
+.input-field:focus {
+  border: 2px solid dodgerblue;
+}
+
+.btn-login-default {
+    background: #1e90ff;
+    color: white;
+    border-color: #1e90ff;
+    width: 100%;
+    border-radius: 0px;
+}
+
+.btn-login-default:hover {
+    color: white;
+}
+
+.btn-link {
+    color: #1e90ff;
+}
