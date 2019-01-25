@@ -29,11 +29,12 @@ Route::group(['middleware' => 'auth'], function () {
 Route::get('/post/show', 'PostController@index')->name('post');
 
 Route::get('/post/new', 'PostController@create')->name('new');
-// Route::post('/post/save-post', 'PostController@store')->name('save-post');
-
-Route::get('/post/categories', 'PostController@categories')->name('categories');
+Route::post('/post/save-post', 'PostController@store')->name('save-post');
 
 Route::get('/post/edit/{id}', 'PostController@edit')->name('edit-post');
+Route::put('/post/update-post/{id}', 'PostController@update')->name('save-edit-post');
+
+Route::get('/post/categories', 'PostController@categories')->name('categories');
 // Route::post('/post/edit/{id}', 'PostController@update')->name('update-post');
 // Route::post('/post/edit/{id}', 'PostController@store')->name('save-post');
 

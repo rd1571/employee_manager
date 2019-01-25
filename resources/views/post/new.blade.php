@@ -4,7 +4,7 @@
 
 <h1>New Post</h1>
 
-<form class="form-horizontal" method="POST" action="{{ route('new') }}">
+<form class="form-horizontal" method="POST" action="{{ route('save-post') }}">
     {{ csrf_field() }}
 
     <div class="form-group{{ $errors->has('title') ? ' has-error' : '' }}">

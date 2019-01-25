@@ -21,9 +21,7 @@ class PostController extends Controller
 
         $post = Post::all();
 
-        return view('post.show', [
-            'data' => $post
-        ]);
+        return view('post.show')->with('post', $post);
     }
 
     public function create() 
@@ -33,40 +31,19 @@ class PostController extends Controller
 
     public function store(Request $request)
     {
-        // $data = [
-        //     'title' => $request->input('title'),
-        //     'description' => $request->input('description'),
-        //     'created_at' => date('Y-m-d H:i:s'),
-        //     'updated_at' => date('Y-m-d H:i:s')
-        // ];
-
-        // $model = new Post();
-
-        // if ($request->isMethod('post')) {
-
-        //     Post::create($data);
-
-        //     return redirect('/post/all');
-
-        //     //var_dump($model);exit;
-        //     //DB::table('post')->insert($data);
-        // }
-
-        // $this->validate();
-
         $model = new Post();
         $model->title = $request->input('title');
         $model->description = $request->input('description');
-        
-        return $model->save();
+        $model->save();
+
+        return redirect()->route('new');
     }
 
     public function edit($id)
     {
-        
-        // $post = Post::find($id);
+        $model = Post::find($id);
 
-        return view('post.edit');
+        return view('post.edit')->with('post', $model);
     }
 
     public function update($id)
@@ -75,8 +52,9 @@ class PostController extends Controller
         $model = Post::find($id);
         $model->title = $request->input('title');
         $model->description = $request->input('description');
-        
-        return $model->save();
+        $model->save();
+
+        return redirect()->route('new');
     }
 
     public function categories()

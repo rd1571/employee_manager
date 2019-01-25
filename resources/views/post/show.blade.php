@@ -19,7 +19,7 @@
             <td>{{ $p->title }}</td>
             <td>{{ $p->description }}</td>
             <td>
-                <a href="{{ route('edit-post', ['id' => $p->id]) }}">Edit</a> 
+                <a href="/post/edit/{{ $p->id }}">Edit</a> 
                 | 
                 <a href="#">Delete</a>
             </td>
